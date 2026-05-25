@@ -15,7 +15,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-May-05 16:39 UTC
+  - Updated:      2026-May-14 22:46 UTC
 
   ==========================================================";
 }
@@ -2848,7 +2848,7 @@ form.filters:not(:hover) {
   margin-bottom: 4.5em !important;
 }
 
-.filters fieldset {
+.filters > fieldset {
   overflow: visible;
   margin: 0;
   padding: 0;
@@ -2856,7 +2856,7 @@ form.filters:not(:hover) {
   background: transparent;
 }
 
-.filters fieldset li {
+.filters > fieldset li {
   margin: 0;
   padding: 0;
 }
