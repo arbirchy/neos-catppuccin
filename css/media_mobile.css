@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-Mar-14 18:47 UTC
+  - Updated:      2026-May-30 17:38 UTC
 
   ==========================================================";
 }
@@ -24,7 +24,7 @@ h2.heading + h3.heading:not(.landmark) {
 >> 03 REGION: HEADER
 ============================================================*/
 
-/* header dropdown menus => removes some stuff that was only needed for desktop or tablet */
+/* header dropdown menus => reset styling that was only needed for desktop and tablet */
 #header .menu {
   width: 100%;
   max-width: unset;
@@ -76,7 +76,10 @@ h2.heading + h3.heading:not(.landmark) {
 >> 05 REGION: MAIN
 ============================================================*/
 
+/*>========== form rules ==========<*/
+
 /* DO NOT DELETE! */
+/* make form elements stack vertically and take up the full width of the screen */
 .filtered .index,
 form.filters,
 form dd,
@@ -94,14 +97,17 @@ form.inbox {
 >> 06 REGION: FOOTER
 ============================================================*/
 
+/* footer layout */
 #footer {
-  padding-block: 5%;
+  padding-block: 5%; /* space above and below footer content */
 }
 
+/* make footer elements wrap to multiple lines */
 #footer ul.navigation.actions {
   flex-wrap: wrap;
 }
 
+ /* make modules take up about half of the width each, so that they are arranged in two rows */
 #footer ul li.module {
   flex-basis: 47.5%;
 }
@@ -161,7 +167,9 @@ p.navigation.actions {
 >> 17 ZONE: HOME
 ============================================================*/
 /* rearrange the elements on primary (home) pages */
+/* = user, collections/challenges, tags, admin comms pages */
 
+/* center header and actions */
 .home .header h2,
 .home .header ul.actions {
   margin-left: 0;
