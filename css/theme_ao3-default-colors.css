@@ -1,4 +1,4 @@
-.site-skin-metadata {
+﻿.site-skin-metadata {
   content: "==================================================
 
   - Skin:         neos/theme_ao3-default-colors
@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-Apr-19 11:03 UTC
+  - Updated:      2026-May-30 15:02 UTC
 
   ==========================================================";
 }
@@ -48,7 +48,7 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
 /*>========== MAIN BACKGROUND COLORS ==========<*/
 
   --bg1:                 #FFFFFF;                  /* main background, footer etc. */
-  --bg2:                 #900000;                  /* header, footer */
+  --bg2:                 #990000;                  /* header, footer */
   --bg3:                 #F0F0F0;                  /* dashboard */
   --bg4:                 #F4F4F4;                  /* forms, modal dialogs, javascript context etc. */
   --bg5:                 #FFFFFF;                  /* content boxes (blurbs, comments etc.), meta box */
@@ -106,11 +106,11 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
   --int-btn-border:      #B4B4B4;                  /* border */
   --int-btn-txt:         #2A2A2A;                  /* text */
   --int-btn-hgl-bg:      #F8F8F8;                  /* background for hovered/focused buttons */
-  --int-btn-hgl-txt:     #900000;                  /* text for hovered/focused buttons */                                                                        
+  --int-btn-hgl-txt:     #990000;                  /* text for hovered/focused buttons */                                                                        
   
   --int-bg:              #FFFFFF;                  /* background for input and select elements */
 
-  --int-current-bg:      #c1c1c1;                  /* background for currently active elements */
+  --int-current-bg:      #C1C1C1;                  /* background for currently active elements */
   --int-current-txt:     #2A2A2A;                  /* text for currently active elements */
   --int-disabled-bg:     #D6D6D6;                  /* background for disabled buttons and checkboxes */
   --int-checked:         #1636D9;                  /* checked checkboxes and radio buttons */
@@ -138,7 +138,7 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
 
   /* other icons */
   --icon-bg:             linear-gradient(135deg, #00000025, #FFFFFF 75%); /* background for empty icon box or uploaded icon with transparent background */
-  --icon-id:             linear-gradient(135deg, #FFFFFF85, transparent) #900; /* user, skin, tag, admin */
+  --icon-id:             linear-gradient(135deg, #FFFFFF85, transparent) #990000; /* user, skin, tag, admin */
   --icon-coll:           linear-gradient(135deg, #FFFFFF85, transparent) #616C90; /* collection, unrevealed work */
   --icon-anon:           linear-gradient(135deg, #FFFFFF85, transparent) #8B8B8B; /* guest, anonymous user */
 
@@ -171,23 +171,23 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
   --tag-border:          #00000025;
 
   /* hover and focus */
-  --tag-hgl-bg:          #900000;                  /* background */
+  --tag-hgl-bg:          #990000;                  /* background */
   --tag-hgl-txt:         #FFFFFF;                  /* text */
 
 
 /*>========== COLORS FOR ROLES AND STATES + SYSTEM MESSAGES ==========<*/
  
   /* background */
-  --notice-bg:           #D1E1EF; 
+  --notice-bg:           #D1E1EF;
   --success-bg:          #D1F0D1;
   --caution-bg:          #FFE34E;
   --alert-bg:            #EFD1D1;
 
   /* text (and borders) */
-  --notice-txt:          #00518F; 
+  --notice-txt:          #00518F;
   --success-txt:         #008000;
   --caution-txt:         #8F7700;
-  --alert-txt:           #900000;
+  --alert-txt:           #990000;
 
 
 /*>========== FILTERS ==========<*/
@@ -198,8 +198,7 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
   --kudos-icon:          invert(18%) sepia(86%) saturate(2463%) hue-rotate(345deg) brightness(88%) contrast(95%);
   --lock-icon:           invert(12%) sepia(100%) saturate(4991%) hue-rotate(244deg) brightness(71%) contrast(144%);
   --stats-icon:          invert(65%);
-  --stat-chart:          none;
-  --rich-txt-editor:     none;
+  --rich-txt-content:    none;
 
 }
 
@@ -234,4 +233,17 @@ https://coolors.co/000000-2a2a2a-8b8b8b-b4b4b4-c1c1c1-d6d6d6-f0f0f0-f4f4f4-f8f8f
 #footer a:is(:hover, :focus),
 #footer button:is(:hover, :focus) {
   color: var(--txt-header-hgl);
+}
+
+/*============================================================
+>> Z3 MISCELLANEOUS
+============================================================*/
+
+/*>========== statistics page ==========<*/
+
+/*>>========== chart ==========<<*/
+
+/* column color */
+#stat_chart rect[fill="#993333"] {
+  fill: var(--bg2);
 }

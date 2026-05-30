@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-Apr-19 11:03 UTC
+  - Updated:      2026-May-30 16:21 UTC
 
   ==========================================================";
 }
@@ -180,16 +180,16 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 
 
 /*>========== COLORS FOR ROLES AND STATES + SYSTEM MESSAGES ==========<*/
-/* palette: https://coolors.co/deeaf7-2e6cb2-cffff2-008f85-fff7e5-856114-fcdce2-c72c53 */
+/* palette: https://coolors.co/deeaf7-2e6cb2-cffff2-008f85-fff7e5-a77916-fcdce2-c72c53 */
 
   /* background */
-  --notice-bg:           #DEEAF7; 
+  --notice-bg:           #DEEAF7;
   --success-bg:          #CFFFF2;
   --caution-bg:          #FFF7E5;
   --alert-bg:            #FCDCE2;
 
   /* text (and borders) */
-  --notice-txt:          #2E6CB2; 
+  --notice-txt:          #2E6CB2;
   --success-txt:         #008F85;
   --caution-txt:         #A77916;
   --alert-txt:           #C72C53;
@@ -203,7 +203,6 @@ Color palettes used for main backgrounds, borders, text and interaction elements
   --kudos-icon:          brightness(0) saturate(100%) invert(48%) sepia(53%) saturate(3274%) hue-rotate(304deg) brightness(89%) contrast(85%);
   --lock-icon:           brightness(0) saturate(100%) invert(20%) sepia(10%) saturate(5089%) hue-rotate(278deg) brightness(92%) contrast(86%);
   --stats-icon:          brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(274%) hue-rotate(314deg) brightness(82%) contrast(87%);
-  --stat-chart:          saturate(150%) hue-rotate(325deg) contrast(98%) sepia(3%);
-  --rich-txt-editor:     none;
+  --rich-txt-content:    none;
 
 }

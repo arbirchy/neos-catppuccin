@@ -1,4 +1,4 @@
-.site-skin-metadata {
+﻿.site-skin-metadata {
   content: "==================================================
 
   - Skin:         neos/theme_midnight-black
@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-Apr-19 11:03 UTC
+  - Updated:      2026-May-30 10:20 UTC
 
   ==========================================================";
 }
@@ -17,7 +17,7 @@ GLOBAL VARIABLES
 
 Color palette used for main backgrounds, borders, text and interaction elements:
 
-Grayscale: https://coolors.co/000000-090b0b-111515-181e1e-1f2626-333b3b-3f4b4b-627a7a-dae6e1
+Grayscale: https://coolors.co/000000-090b0b-111515-181e1e-1f2626-333b3b-3f4b4b-627a7a-dae6e1-ffffff
 Cyan:      https://coolors.co/00767a-00a8ad-00c5cc
   
 */
@@ -123,7 +123,7 @@ Cyan:      https://coolors.co/00767a-00a8ad-00c5cc
 
 
 /*>========== ICON COLORS ==========<*/
-/* palette: https://coolors.co/292f2f-008e7e-007e9e-773ac7-b31f5b */
+/* palette: https://coolors.co/292f2f-009172-0085a6-773ac7-b31f5b */
 
   /* bookmark and content icons (mostly) */  
   --icon1:               #009172;                  /* gen, complete, public bookmark */
@@ -183,13 +183,13 @@ Cyan:      https://coolors.co/00767a-00a8ad-00c5cc
 /* https://coolors.co/07252e-35bbe3-00241a-00c28e-261e11-dcad5b-2e0a1b-eb3b7b */
 
   /* background */
-  --notice-bg:           #07252E; 
+  --notice-bg:           #07252E;
   --success-bg:          #00241A;
   --caution-bg:          #261E11;
   --alert-bg:            #2E0A1B;
 
   /* text (and borders) */
-  --notice-txt:          #35BBE3; 
+  --notice-txt:          #35BBE3;
   --success-txt:         #00C28E;
   --caution-txt:         #DCAD5B;
   --alert-txt:           #EB3B7B;
@@ -203,8 +203,7 @@ Cyan:      https://coolors.co/00767a-00a8ad-00c5cc
   --kudos-icon:          brightness(0) saturate(100%) invert(23%) sepia(60%) saturate(2452%) hue-rotate(308deg) brightness(89%) contrast(89%);
   --lock-icon:           brightness(0) saturate(100%) invert(86%) sepia(15%) saturate(102%) hue-rotate(103deg) brightness(108%) contrast(84%);
   --stats-icon:          brightness(0) saturate(100%) invert(46%) sepia(13%) saturate(265%) hue-rotate(131deg) brightness(94%) contrast(92%);
-  --stat-chart:          invert(100%) hue-rotate(350deg) brightness(85%) contrast(80%) saturate(150%);
-  --rich-txt-editor:     invert(95%) saturate(0);
+  --rich-txt-content:    invert(86%) sepia(15%) saturate(102%) hue-rotate(103deg) brightness(108%) contrast(84%);
 
 }
 

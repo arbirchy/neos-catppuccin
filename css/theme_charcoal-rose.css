@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-May-24 22:59 UTC
+  - Updated:      2026-May-30 10:18 UTC
 
   ==========================================================";
 }
@@ -181,13 +181,13 @@ Rose:     https://coolors.co/ab6f7d-c93b6a-d83f6c-d96aa9-e077ac-f59db3-ffabdf-ff
 /* palette: https://coolors.co/24051a-bb589d-171221-bf9867-1c1813-8f6ccb-24050d-e6436e */
 
   /* background */
-  --notice-bg:           #24051A; 
+  --notice-bg:           #24051A;
   --success-bg:          #171221;
   --caution-bg:          #1C1813;
   --alert-bg:            #24050D;
 
   /* text (and borders) */
-  --notice-txt:          #BB589D; 
+  --notice-txt:          #BB589D;
   --success-txt:         #8F6CCB;
   --caution-txt:         #BF9867;
   --alert-txt:           #E6436E;
@@ -201,8 +201,7 @@ Rose:     https://coolors.co/ab6f7d-c93b6a-d83f6c-d96aa9-e077ac-f59db3-ffabdf-ff
   --kudos-icon:          brightness(0) saturate(100%) invert(52%) sepia(26%) saturate(736%) hue-rotate(287deg) brightness(102%) contrast(93%);
   --lock-icon:           brightness(0) saturate(100%) invert(87%) sepia(12%) saturate(152%) hue-rotate(297deg) brightness(90%) contrast(95%);
   --stats-icon:          brightness(0) saturate(100%) invert(74%) sepia(8%) saturate(1115%) hue-rotate(296deg) brightness(108%) contrast(79%) opacity(75%);
-  --stat-chart:          invert(100%) hue-rotate(150deg) brightness(85%) contrast(77%);
-  --rich-txt-editor:     invert(95%) saturate(0);
+  --rich-txt-content:    invert(87%) sepia(12%) saturate(152%) hue-rotate(297deg) brightness(90%) contrast(95%);
 
 }
 

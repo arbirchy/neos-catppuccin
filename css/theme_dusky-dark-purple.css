@@ -6,7 +6,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-Apr-19 11:03 UTC
+  - Updated:      2026-May-30 16:21 UTC
 
   ==========================================================";
 }
@@ -17,9 +17,9 @@ GLOBAL VARIABLES
 
 Color palettes used for main backgrounds, borders, text and interaction elements:
 
-- Purple + rose:          https://coolors.co/161417-872d55-ad396f-d44e8d-e882a9-bd8a96-f3cace
 - Darker purple + violet: https://coolors.co/1f1b21-262029-302433-3c293c-472e44-55354e-7f416e-a94c8d
-  
+- Berry + rose:           https://coolors.co/d44e8d-ad396f-872d55-bd8a96-f7cfd2
+
 */
 
 :root {
@@ -122,7 +122,7 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 
 
 /*>========== ICON COLORS ==========<*/
-/* palette: https://coolors.co/4cb7c3-5e96d6-b268cf-ea5a9a */
+/* palette: https://coolors.co/5e73c8-694cb8-9b37a4-ad396f-55354e */
 
   /* bookmark and content icons (mostly) */  
   --icon1:               #5E73C8;                  /* gen, complete, public bookmark */
@@ -150,7 +150,6 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 
 
 /*>========== TAG COLORS ==========<*/
-/* palette: https://coolors.co/f3cedf-ebd8f3-dbeaf0 */
 
   /* background */
   --tag-default-bg:      #A94C8D35;
@@ -182,13 +181,13 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 /* palette: https://coolors.co/131a2a-6d8dd1-051c1a-1a9d93-171111-d06864-200811-cc376b */
 
   /* background */
-  --notice-bg:           #131A2A; 
+  --notice-bg:           #131A2A;
   --success-bg:          #051C1A;
   --caution-bg:          #171111;
   --alert-bg:            #200811;
 
   /* text (and borders) */
-  --notice-txt:          #6D8DD1; 
+  --notice-txt:          #6D8DD1;
   --success-txt:         #1A9D93;
   --caution-txt:         #D06864;
   --alert-txt:           #CC376B;
@@ -202,8 +201,7 @@ Color palettes used for main backgrounds, borders, text and interaction elements
   --kudos-icon:          brightness(0) saturate(100%) invert(48%) sepia(53%) saturate(3274%) hue-rotate(304deg) brightness(89%) contrast(85%);
   --lock-icon:           brightness(0) saturate(100%) invert(64%) sepia(35%) saturate(295%) hue-rotate(296deg) brightness(87%) contrast(86%);
   --stats-icon:          brightness(0) saturate(100%) invert(34%) sepia(18%) saturate(1308%) hue-rotate(264deg) brightness(89%) contrast(96%);
-  --stat-chart:          invert(100%) sepia(100%) saturate(600%) hue-rotate(285deg) brightness(65%) contrast(70%);
-  --rich-txt-editor:     invert(100%) saturate(0) contrast(90%);
+  --rich-txt-content:    invert(64%) sepia(35%) saturate(295%) hue-rotate(296deg) brightness(87%) contrast(86%);
 
 }
 
@@ -216,3 +214,4 @@ Color palettes used for main backgrounds, borders, text and interaction elements
 /* default user icon */
 img[src$="/images/skins/iconsets/default/icon_user.png"] {
   content: url("https://zerafinacss.github.io/ao3/icons/user-visitor-02.png"); /* url of new icon */
+}

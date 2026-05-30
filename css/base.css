@@ -15,11 +15,10 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-May-14 22:46 UTC
+  - Updated:      2026-May-30 16:21 UTC
 
   ==========================================================";
 }
-
 
 /*============================================================
 CREDITS
@@ -69,7 +68,8 @@ Alphanumeric = Additions by ZerafinaCSS
 ============================================================*/
 
 /* main text */
-body:not(#tinymce) {
+body,
+.dropdown {
   font-size: var(--txt-size-main); /* main font size */
   color: var(--txt-main); /* main font color */
 }
@@ -174,16 +174,18 @@ textarea#skin_css,
 
 /*>========== links ==========<*/
 
+/* link appearance on most pages */
 a,
 a:link,
 a.work,
 .blurb h4 a:link,
 div.preface .byline a,
 .filters p a {
-  border-bottom: var(--link-underline); /* link underline */
-  color: var(--link); /* link color */
+  border-bottom: var(--link-underline); /* link underline; used border-bottom instead of text-decoration for more control over color and thickness */
+  color: var(--link);
 }
 
+/* hover and focus */
 a:is(:hover, :focus),
 a:visited:is(:hover, :focus),
 .blurb .heading a:is(:hover, :focus),
@@ -192,16 +194,17 @@ div.preface .byline a:is(:hover, :focus),
 .fandom.index.group a.tag:is(:hover, :focus),
 h2.heading a.tag:is(:hover, :focus),
 .filters p a:is(:hover, :focus) {
-  border-bottom-color: inherit; /* make link underline visible on hover */
-  color: var(--link-hgl); /* link hover and focus color */
+  border-bottom-color: inherit; /* make link underline visible */
+  color: var(--link-hgl);
 }
 
+/* visited */
 a:visited,
 .blurb .heading a:visited {
-  color: var(--link-visited); /* different color for visited links */
+  color: var(--link-visited);
 }
 
-/* remove border on images that are links */
+/* remove borders on linked images */
 a img {
   border: none;
 }
@@ -323,13 +326,19 @@ col.name {
 
 /*>========== logo and title/heading ==========<*/
 
+/* placement */
 #header .heading {
   order: 1;
   margin-left: var(--margins-header);
   padding: 0;
 }
 
-/* reset heading */
+/* hide "Archive of Our Own" title + logo */
+#header .heading a * {
+  display: none;
+}
+
+/* reset title/heading font settings */
 #header .heading a {
   font-size: 1em;
   line-height: 1;
@@ -343,16 +352,11 @@ col.name {
   content: "AO3";
 }
 
-/* hovered and focused title */
+/* hovered/focused title */
 #header .heading a:is(:hover, :focus)::before {
   -webkit-background-clip: text;
   background-image: var(--txt-header-hgl-h1);
   color: transparent;
-}
-
-/* hide "Archive of Our Own" title + logo */
-#header .heading a * {
-  display: none;
 }
 
 /*>========== header dropdown menus ==========<*/
@@ -560,7 +564,7 @@ col.name {
   display: none;
 }
 
-/* change the look of header search bar */
+/* change look of the header search bar */
 #header #search .text {
   min-width: 170px;
   max-width: 20vw;
@@ -1426,13 +1430,21 @@ a:link.current,
 }
 
 /* disabled buttons */
+/* most of those are not used on AO3, but I'm putting them here just in case */
+.action:disabled,
+.action a:disabled,
+.actions a:disabled,
+.actions button:disabled,
+input[type=submit]:disabled,
+input[type=button]:disabled,
+button:disabled, /* actually used ones (atm) start here */
 .actions label.disabled,
 #tos_prompt [disabled] {
   border: var(--border-width) solid var(--int-btn-border);
   background-color: var(--int-disabled-bg);
   color: var(--txt-main);
   cursor: not-allowed;
-  filter: opacity(0.75);
+  filter: opacity(0.65);
 }
 
 /* select element on disabled buttons */
@@ -1905,6 +1917,7 @@ a.cloud8 {
 
 /*>>========== definition lists (subscriptions, related works, edit multiple works) ==========<<*/
 
+/* layout */
 dl.index dt,
 dl.index dd {
   padding: 0.643em;
@@ -1912,15 +1925,29 @@ dl.index dd {
   background-color: var(--bg1);
 }
 
+/* top item ("term") */
 dl.index dt {
   background-color: var(--bg7);
   border-radius: var(--radius-mid) var(--radius-mid) 0 0;
 }
 
+/* adjustment for multiple top items (works in an unrevealed collection) */
+dl.index dt:has(+ dt) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* second and following top items */
+dl.index dt + dt {
+  border-radius: 0;
+  border-top: none;
+}
+
+/* bold first link in top items */
 dl.index dt a:first-of-type {
   font-weight: 700;
 }
-
+ /* bottom item ("definition") */
 dl.index dd {
   margin-inline: 0;
   border-top: 0;
@@ -4255,18 +4282,43 @@ dl.stats dd {
 
 /*>========== statistics page ==========<*/
 
-/*>>========== stat chart ==========<<*/
+/*>>========== chart ==========<<*/
 
 #stat_chart {
   overflow: hidden;
   margin-top: 1em;
-  border-radius: var(--radius-mid); /* can't add border because it causes a weird error */
-  filter: var(--stat-chart);
 }
 
 /* remove white chart background */
 #stat_chart svg > rect {
   display: none;
+}
+
+/* text and border bottom color */
+#stat_chart text,
+#stat_chart rect[fill="#333333"] {
+  fill: var(--txt-main);
+}
+
+/* primary horizontal gridlines color */
+#stat_chart rect[fill="#cccccc"] {
+  fill: var(--border4);
+}
+
+/* secondary horizontal gridlines color */
+#stat_chart rect[fill="#ebebeb"] {
+  fill: var(--border1);
+}
+
+/* column color */
+#stat_chart rect[fill="#993333"] {
+  fill: var(--link);
+}
+
+/* tooltip colors */
+#stat_chart .google-visualization-tooltip path {
+  stroke: var(--border4); /* border */
+  fill: var(--bg6); /* background */
 }
 
 /*>>========== fandoms index: place work title and stats next to each other (if possible) ==========<<*/
@@ -4298,17 +4350,120 @@ dl.stats dd {
 }
 
 /*>========== rich text editor ==========<*/
-/* ISSUE: haven't found a way to change the font (works when applying skin directly in Firefox browser but not after saving it to AO3) :/ */
 
+/* editor box styling */
 .tox.tox-tinymce {
-  border-color: var(--border1);
+  border: var(--border-width) solid var(--border2);
   border-radius: var(--radius-big);
+  background: var(--int-bg);
+  color-scheme: initial;
 }
 
-.tox-editor-container,
-.tox-statusbar,
-.tox-dialog {
-  filter: var(--rich-txt-editor);
+/* top and bottom bars */
+.tox .tox-toolbar,
+.tox .tox-statusbar,
+.tox .tox-statusbar__path-item,
+.tox .tox-edit-area__iframe {
+  background: none !important;
+  color: var(--txt-main) !important;
+}
+
+/* borders inside */
+.tox div {
+  border-color: var(--border1) !important;
+}
+
+/* textarea */
+/* using font-family and color is not possible here, because iframe content cannot be styled with a user-made site skin */
+/* use filters instead to change colors, but unfortunately this also changes image colors */
+.tox .tox-edit-area__iframe {
+  filter: var(--rich-txt-content);
+}
+
+/* buttons */
+.tox .tox-button {
+  padding: 0.25em 0.75em !important;
+  border: var(--border-width) solid var(--int-btn-border) !important;
+  border-radius: var(--radius-btn) !important;
+  box-shadow: var(--shadow-buttons) !important;;
+  background: var(--int-btn-bg) !important;
+  background-origin: border-box !important;
+  color: var(--int-btn-txt) !important;
+}
+
+/* buttons when hovered/focused */
+.tox .tox-tbtn:not(.tox-tbtn--disabled):is(:hover, :focus),
+.tox .tox-button:not(.tox-tbtn--disabled):is(:hover, :focus) {
+  border-color: var(--link) !important;
+  box-shadow: none !important;
+  background: var(--int-btn-hgl-bg) !important;
+  color: var(--int-btn-hgl-txt) !important;
+}
+
+/* buttons when enabled */
+.tox .tox-tbtn--enabled,
+.tox .tox-tbtn--enabled:hover {
+  background: var(--int-current-bg) !important;
+}
+
+/* toolbar icons */
+.tox .tox-tbtn svg {
+  fill: var(--txt-main) !important;
+}
+
+/* toolbar icons when hovered/focused */
+.tox .tox-tbtn:is(:hover, :focus) svg {
+  fill: var(--int-btn-hgl-txt) !important;
+}
+
+/* toolbar icons when enabled */
+.tox .tox-tbtn--enabled svg,
+.tox .tox-tbtn--enabled:is(:hover, :focus) svg {
+  fill: var(--int-current-txt) !important;
+}
+
+/* toolbar icons when disabled */
+.tox .tox-tbtn--disabled svg,
+.tox .tox-tbtn--disabled:hover svg,
+.tox .tox-tbtn:disabled svg,
+.tox .tox-tbtn:disabled:hover svg {
+  fill: var(--int-current-txt) !important;
+  filter: opacity(0.2);
+}
+
+/* dialog backdrop */
+/* dialog opens when the link or image icons are clicked */
+.tox .tox-dialog-wrap__backdrop {
+  background: #000000B2 !important; /* same as AO3 modal backdrop */
+}
+
+/* dialog styling */
+.tox .tox-dialog,
+.tox .tox-dialog__header,
+.tox .tox-dialog__footer,
+.tox .tox-label {
+  border-color: var(--border3) !important;
+  background: var(--bg6) !important;
+  color: var(--txt-main) !important;
+}
+
+/* select elements in dialog */
+.tox .tox-selectfield select,
+.tox .tox-textarea,
+.tox .tox-textfield,
+.tox .tox-toolbar-textfield {
+  border-color: var(--border2) !important;
+  background: var(--int-bg) !important;
+  color: var(--txt-main) !important;
+}
+
+/* select elements in dialog when focused */
+.tox .tox-selectfield select:focus,
+.tox .tox-textarea:focus,
+.tox .tox-textfield:focus,
+.tox .tox-toolbar-textfield:focus {
+  border-color: var(--int-hgl) !important;
+  outline: 1px solid var(--int-hgl) !important;
 }
 
 /*>========== "Comment Formatting and Preview" userscript ==========<*/
