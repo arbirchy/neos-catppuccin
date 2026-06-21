@@ -15,7 +15,7 @@
   - Instructions: https://ao3.org/works/65849527
   - Repository:   https://github.com/ZerafinaCSS/neos
   - License:      MIT
-  - Updated:      2026-May-30 16:21 UTC
+  - Updated:      2026-Jun-21 14:33 UTC
 
   ==========================================================";
 }
@@ -635,6 +635,7 @@ col.name {
   scrollbar-color: transparent transparent;
 }
 
+/* dashboard content list */
 #dashboard ul {
   display: block;
   float: none;
@@ -644,10 +645,12 @@ col.name {
   text-align: left;
 }
 
+/* remove top border for the first list item */
 #dashboard ul:not(.secondary):first-of-type {
   border-top: 0;
 }
 
+/* links and text */
 #dashboard a,
 #dashboard span {
   display: block;
@@ -660,16 +663,19 @@ col.name {
   line-height: 1.286;
 }
 
+/* hover and focus for links */
 #dashboard a:is(:hover, :focus) {
   background: var(--int-hgl-bg);
   color: var(--int-hgl-txt);
 }
 
+/* current page indicator */
 #dashboard .current {
   background-color: var(--int-current-bg);
   color: var(--int-current-txt);
 }
 
+/* pseuds switcher */
 #dashboard .secondary {
   margin-block: 0.25em;
   padding: 0.25em;
@@ -733,6 +739,7 @@ col.name {
 /* see "Archive: (6) region footer skin" by AO3 */
 /* #4 of the 4 regions shown on every page */
 
+/* set up footer layout and styling */
 #footer {
   box-sizing: border-box;
   width: 100%;
@@ -776,7 +783,7 @@ col.name {
   color: var(--txt-main);
 }
 
-/* links in footer */
+/* footer links */
 #footer a,
 #footer button {
   border-bottom: var(--link-underline) !important;
@@ -784,7 +791,7 @@ col.name {
   color: var(--link);
 }
 
-/* hover for links in footer */
+/* footer link hover and focus */
 #footer a:is(:hover, :focus),
 #footer button:is(:hover, :focus) {
   border-bottom-color: inherit !important;
@@ -1331,7 +1338,6 @@ form.single input[type=submit] {
 
 .dynamic form fieldset,
 .toggled form fieldset,
-.toggled form dl,
 .secondary .toggled form,
 .secondary form {
   overflow: visible;
@@ -1499,6 +1505,7 @@ fieldset.actions li:not(:first-child) {
 
 /*>========== CONTEXTS ==========<*/
 
+/* I do not remember where this is ... */
 .dashboard .header .landmark {
   display: none;
 }
@@ -1519,6 +1526,15 @@ fieldset.actions li:not(:first-child) {
   box-shadow: var(--shadow);
   background-color: var(--bg6);
   color: var(--main-txt);
+}
+
+/* flashing download menu fix */
+.work.navigation .download {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
 }
 
 .javascript .work.navigation .expanded + .secondary, 
@@ -1947,7 +1963,8 @@ dl.index dt + dt {
 dl.index dt a:first-of-type {
   font-weight: 700;
 }
- /* bottom item ("definition") */
+
+/* bottom item ("definition") */
 dl.index dd {
   margin-inline: 0;
   border-top: 0;
@@ -2469,9 +2486,9 @@ li.picture.blurb,
 
 /*>>========== mod: PROMPT ==========<<*/
 
-/* hide this to get rid of the weird space before and after promt summary; not sure if this affects anything else */
+/* this is to remove the space before and after prompt summaries */
 .prompt .blurb h6.landmark {
-  display: none;
+  display: block;
 }
 
 /* this needs to be here so the optional tags are displayed correctly */
@@ -2646,6 +2663,7 @@ li.comment:has(.edit_comment) {
 }
 
 /*>========== ZONE: SYSTEM: SPLASH PAGE ==========<*/
+/* this is the AO3 homepage */
 
 /* create flexbox layout */
 .splash {
@@ -2751,8 +2769,8 @@ li.comment:has(.edit_comment) {
 ============================================================*/
 /* see "Archive: (17) zone home skin" by AO3 */
 
-/* home for: user, collections/challenges, tags, admin comms 
---this zone always shows a dashboard styled in region-dashboard and its parent is #main.dashboard */
+/* home for: user, collections/challenges, tags, admin comms */
+/* always shows a dashboard styled in region-dashboard and its parent is #main.dashboard */
 
 /* layout */
 .home .primary.header.module {
