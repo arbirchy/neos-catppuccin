@@ -136,7 +136,7 @@ span.unread,
 span.replied,
 span.claimed,
 .actions span.defaulted {
-  font-family: Verdana, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+  font-family: -apple-system-ui-serif, ui-serif, 'Sitka Small', 'Georgia', serif;
 }
 
 /* headings font family */
@@ -147,7 +147,7 @@ h4,
 h5,
 h6,
 .heading {
-  font-family: Verdana, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI Variable Small', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-wrap: anywhere;
   word-break: normal;
 }
@@ -164,7 +164,7 @@ textarea#skin_css,
 .splash .news .meta,
 .datetime {
   font-size: 0.9em;
-  font-family: Consolas, Monaco, Courier, monospace;
+  font-family: ui-monospace, SFMono-Regular, ui-monospace, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 /*============================================================
