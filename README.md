@@ -11,5 +11,5 @@ Visit the [AO3 work](https://archiveofourown.org/works/65849527) for instruction
 
 | Theme              | Preview |
 | ------------------ | ------- |
-| Latte              | ![Invincible fandom Search Page with Latte theme](/../main/images/preview_desktop_bookmarks_ao3-default-colors.png) |
-| Mocha              | ![Invincible fandom Search Page with Mocha theme](/../main/images/preview_desktop_bookmarks_black-white.png) |
+| Latte              | ![Invincible fandom Search Page with Latte theme](/../main/images/preview_desktop_bookmarks_catppuccin-latte.png) |
+| Mocha              | ![Invincible fandom Search Page with Mocha theme](/../main/images/preview_desktop_bookmarks_catppuccin-mocha.png) |
